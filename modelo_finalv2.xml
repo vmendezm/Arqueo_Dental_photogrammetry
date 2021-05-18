@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batchjobs version="1.7.1" save_project="true">
+  <job name="OptimizeCameras" target="list" chunks="4">
+    <fit_b1>true</fit_b1>
+    <fit_b2>true</fit_b2>
+    <fit_corrections>true</fit_corrections>
+    <fit_k4>true</fit_k4>
+    <tiepoint_covariance>true</tiepoint_covariance>
+  </job>
+  <job name="BuildDenseCloud" target="list" chunks="4">
+    <point_confidence>true</point_confidence>
+    <reuse_depth>true</reuse_depth>
+  </job>
+  <job name="BuildModel" target="list" chunks="4">
+    <downscale>1</downscale>
+    <face_count>0</face_count>
+    <face_count_custom>0</face_count_custom>
+    <reuse_depth>true</reuse_depth>
+  </job>
+  <job name="BuildTexture" target="list" chunks="4">
+    <texture_size>8192</texture_size>
+  </job>
+</batchjobs>
